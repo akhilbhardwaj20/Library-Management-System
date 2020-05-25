@@ -1,0 +1,13 @@
+create database hello;
+use hello;
+create table pet(name varchar(255),owner varchar(255),species varchar(255),sex varchar(40),birth date,death date);
+insert into pet values('Fluffy','harold','cat','f','1993-02-04',null);
+ insert into pet values('Claws','Gwen','cat','m','1994-03-17',null);
+  insert into pet values('Buffy','herald','dog','f','1989-05-13',null);
+   insert into pet values('Fenn','Bennny','dog','m','1990-08-27',null);
+    insert into pet values('Bowser','diane','dog','m','1979-08-31','1995-07-29');
+     insert into pet values('Chirpy','Gwen','Bird','f','1998-09-11',null);
+ insert into pet values('Whistler','Gwen','Bird',null,'1997-12-09',null);
+  insert into pet values('Slim','Benny','Snake','m','1996-04-29',null);
+  select* from pet;
+  delete from pet where name='Fluffy';
