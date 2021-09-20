@@ -1,0 +1,24 @@
+class Solution {
+// TC - O(n)(Boyer Moore Voting Algorithm)
+// SC - O(1)
+    public int majorityElement(int[] nums) {
+        int mE = nums[0];
+        int count = 1;
+        
+        for(int i=1; i< nums.length; i++) {
+            
+            if(nums[i] == mE) {
+                count++; 
+            } else {
+                
+                count--;  
+                if(count == 0) { // if cnt becomes 0 then update the majority elem with the curr elem
+                    mE = nums[i];
+                    count =1;
+                }
+            }
+        }
+        return mE;
+    }
+    
+}
